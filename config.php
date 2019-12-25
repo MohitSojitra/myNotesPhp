@@ -1,24 +1,14 @@
 <?php
-$user = 'root';
-$password = 'root';
-$db = 'myNotes';
-$host = 'localhost';
-$port = 8889;
 
-$link = mysqli_init();
-$success = mysqli_real_connect(
-   $link,
-   $host,
-   $user,
-   $password,
-   $db,
-   $port
-);
-    if($link)
-    {
-       echo "Connected";
-    }
-    else{
-       echo "does not connected";
-    }
+$conn = mysqli_connect("localhost", "root", "", "myNotes");
+//$conn = mysqli_connect("127.0.0.1:56244", "azure", "6#vWHD_$", "dominant_mota522");
+mysqli_set_charset($conn, "utf8");
+if (!$conn) {
+    echo "Database is not connected";
+}
+else
+{
+   echo "connected";
+}
+
 ?>
