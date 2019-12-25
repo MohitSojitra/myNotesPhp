@@ -14,11 +14,11 @@ $success = mysqli_real_connect(
    $db,
    $port
 );
-   // if($link)
-   // {
-   //    echo "Connected";
-   // }
-   // else{
-   //    echo "does not connected";
-   // }
+    if($link)
+    {
+       echo "Connected";
+    }
+    else{
+       echo "does not connected";
+    }
 ?>
